@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(229, 255, 247);
+    font-family: 'Berlin Sans FB';
+    margin: 0;
+}
+
+#navBar {
+    background-color: rgb(110,122,118);
+    color: white;
+    height: 50px;
+    font-weight: 800;
+    font-size: 40px;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
