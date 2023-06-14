@@ -1,7 +1,7 @@
 <?php
 include_once './bd.php';
 
-verify()
+verify();
 
 $codigo = $_GET["codigo"];
 
