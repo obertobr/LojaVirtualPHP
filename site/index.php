@@ -16,6 +16,7 @@
                     } else {
                     ?>
                     <span><?= $_SESSION['nome']; ?></span>
+                    <a href="carrinho.php"><img src="imgs/cart.svg"></a>
                     <?php
                     }
                 ?>
