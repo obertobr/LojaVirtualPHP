@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style/style.css">
+        <script src="script/script.js"></script>
     </head>
     <body>
         <header id="navBar">
@@ -39,7 +40,7 @@
                 <div class="line"></div>
                 <span id="valor">R$<?=$product["valor_unitario"]; ?></span>
                 <div>
-                    <input id="addCarrinho" type="button" value="Adicionar ao carrinho">
+                    <input id="addCarrinho" onclick="addCart(<?=$product["codigo_prod"]; ?>)" type="button" value="Adicionar ao carrinho">
                     <span id="quantidade"><?=$product["quantidade"]; ?> itens disponiveis</span>
                 </div>
                 <div class="line"></div>
