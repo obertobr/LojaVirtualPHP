@@ -15,7 +15,8 @@ $senha = hash('sha256', $_POST['senha']);
 
 $bd = connection();
 
-$sql = "INSERT INTO `cliente` (`cpf_cnpj_cli`, `nome_cli`, `numero_cli`, `bairro_cli`, `cidade_cli`, `cep_cli`, `estado_cli`, `endereco_cli`, `senha_cli`) VALUES ('$cpf_cnpj', '$nome', '$numero', '$bairro', '$cidade', '$cep', '$estado', '$endereco', '$senha')";
+$sql = "INSERT INTO `cliente` (`cpf_cnpj_cli`, `nome_cli`, `numero_cli`, `bairro_cli`, `cidade_cli`, `cep_cli`, `estado_cli`, `endereco_cli`, `senha_cli`) 
+        VALUES ('$cpf_cnpj', '$nome', '$numero', '$bairro', '$cidade', '$cep', '$estado', '$endereco', '$senha')";
 
 echo $sql;
 
