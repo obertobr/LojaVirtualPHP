@@ -1,13 +1,13 @@
-:root {
-    font-size: 20px;
-    --text_color: black;
-}
-
 body {
     background-color: rgb(229, 255, 247);
-    font-family: 'Inter';
+    font-family: 'Cascadia Code';
     margin: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
 }
 
 #navBar {
@@ -19,6 +19,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+#titulo{
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 #produtos {
@@ -30,19 +36,15 @@ body {
 
 }
 
-#produtos a {
-    text-decoration: none;
-    color: var(--text_color);
-}
-
 #item_produto {
     background-color: white;
     width: 256px;
+    height: 340px;
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     padding: 12px;
     margin: 20px;
@@ -52,7 +54,9 @@ body {
 }
 
 #img_produto {
-    width: 100%;
+    max-width: 100%;
+    max-height: 70%;
+    
     margin: 1em;
 }
 
@@ -70,35 +74,13 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
 
-    gap: 10px;
     height: 100vh;
     width: 100vw;
 }
 
-#form_label {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-
-}
-
-#form_label label {
-    margin-bottom: 22px;
-
-}
-
-#form_input{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#form_input input {
-    margin: 5px;
+#form_register tr > th:first-child {
+    text-align: end;
 }
 
 #cadastro input {
@@ -122,4 +104,149 @@ body {
     
     text-decoration: none;
     color: black;
+}
+
+#produto{
+    display: flex;
+}
+
+#produto > div {
+    width: 50%;
+    padding: 10px;
+}
+
+#produto img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 10px 0px;
+}
+
+#nome {
+    font-size: 1.5rem;
+}
+
+#valor {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+#addCarrinho {
+    width: 50%;
+    font-size: 1.5rem;
+    font-family: 'Cascadia Code';
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#quantidade {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.548);
+    padding-bottom: -5px;
+}
+
+.sub-titulo {
+    margin-bottom: 10px;
+}
+
+#carrinho {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+#carrinho > span:first-child {
+    font-size: 2.9rem;
+}
+
+#produto_carrinho {
+    display: flex;
+    flex-direction: row;
+
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#produto_carrinho > img {
+    max-height: 100%;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+#produto_carrinho > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin: 0px 5px;
+    width: 100%;
+}
+
+#quantida_produto_carrinho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+#quantida_produto_carrinho input {
+    font-size: 1.5rem;
+    font-family: 'Cascadia Code';
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    width: 2.8rem;
+}
+
+#carrinho > div:last-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+}
+
+#comprar {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Cascadia Code';
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#Total_produto {
+    font-size: 2rem;
+    font-weight: 900;
+    white-space: nowrap;
 }
