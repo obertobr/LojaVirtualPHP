@@ -77,6 +77,18 @@ body {
     width: 100vw;
 }
 
+#login form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    gap: 10px;
+    height: 100vh;
+    width: 100vw;
+}
+
 #form_label {
     display: flex;
     flex-direction: column;
@@ -102,6 +114,11 @@ body {
 }
 
 #cadastro input {
+    width: 282px;
+    height: 32px;
+}
+
+#login input{
     width: 282px;
     height: 32px;
 }
