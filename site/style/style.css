@@ -1,11 +1,6 @@
-:root {
-    font-size: 20px;
-    --text_color: black;
-}
-
 body {
     background-color: rgb(229, 255, 247);
-    font-family: 'Inter';
+    font-family: 'Cascadia Code';
     margin: 0;
     box-sizing: border-box;
 }
@@ -19,6 +14,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+#titulo{
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 #produtos {
@@ -30,19 +31,20 @@ body {
 
 }
 
-#produtos a {
+a {
     text-decoration: none;
-    color: var(--text_color);
+    color:inherit;
 }
 
 #item_produto {
     background-color: white;
     width: 256px;
+    height: 340px;
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     padding: 12px;
     margin: 20px;
@@ -52,7 +54,9 @@ body {
 }
 
 #img_produto {
-    width: 100%;
+    max-width: 100%;
+    max-height: 70%;
+    
     margin: 1em;
 }
 
