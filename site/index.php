@@ -11,7 +11,7 @@
                     
                     if (!isset($_SESSION['cpf-cnpj'])) {
                     ?>
-                    <span><a href="#">Entrar</a> / <a href="cadastro.html">Cadastrar</a></span>
+                    <span><a href="login.html">Entrar</a> / <a href="cadastro.html">Cadastrar</a></span>
                     <?php
                     } else {
                     ?>

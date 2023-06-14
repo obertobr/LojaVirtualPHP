@@ -1,7 +1,7 @@
 <?php
 
 function connection(){
-    $dsn = "mysql:host=localhost;dbname=loja_1";
+    $dsn = "mysql:host=localhost;dbname=loja";
     $username = "root";
     $password = "";
     $conn = new PDO($dsn, $username, $password);
