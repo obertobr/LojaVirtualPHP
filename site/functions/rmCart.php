@@ -6,6 +6,8 @@ verify();
 
 $codigo = $_GET["codigo"];
 
+$bd = connection();
+
 $sql = "SELECT * FROM carrinho WHERE cpf_cnpj_cli = '".$_SESSION['cpf-cnpj']."' AND codigo_prod = '$codigo'";
 $result = $bd->query($sql);
 
@@ -14,7 +16,7 @@ if ($result->rowCount() > 0) {
     if($row["quantidade"] > 1){
         $sql = "UPDATE carrinho SET quantidade = ".($row["quantidade"]-1)." WHERE cpf_cnpj_cli = '".$_SESSION['cpf-cnpj']."' AND codigo_prod = '$codigo'";
     } else {
-        $sql = "DELETE carrinho WHERE cpf_cnpj_cli = '".$_SESSION['cpf-cnpj']."' AND codigo_prod = '$codigo'";
+        $sql = "DELETE FROM carrinho WHERE cpf_cnpj_cli = '".$_SESSION['cpf-cnpj']."' AND codigo_prod = '$codigo'";
     }
 }
 
@@ -27,3 +29,5 @@ if ($linhas == 1){
 } else {
     $bd->rollBack();
 };
+
+header('Location: ' . $_SERVER['HTTP_REFERER']);

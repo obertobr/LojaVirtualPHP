@@ -40,9 +40,9 @@
                             <span>Valor: R$<?=$products["valor_unitario"]; ?></span>
                             <div>
                                 <span>Quantidade:</span>
-                                <input type="button" value="-">
+                                <a href="functions/rmCart.php?codigo=<?=$products["codigo_prod"]; ?>"><input type="button" value="-"></a>
                                 <span><?=$products["qtd"]; ?></span>
-                                <input type="button" value="+">
+                                <a href="functions/addCart.php?codigo=<?=$products["codigo_prod"]; ?>"><input type="button" value="+"></a>
                             </div>
                             <span>Valor Total: R$<?=$products["valor_unitario"]*$products["qtd"]; ?></span>
                         </div>
@@ -54,7 +54,19 @@
             <div class="line"></div>
             <div>
                 <input type="button" value="COMPRAR" id="comprar">
-                <span id="Total_produto">Total: R$2100,40</span>
+                <?php
+                $bd = connection();
+                $sql = "SELECT SUM(p.valor_unitario * c.quantidade) valor FROM carrinho c INNER JOIN produto p ON c.codigo_prod = p.codigo_prod WHERE cpf_cnpj_cli = ".$_SESSION['cpf-cnpj'];
+                $result = $bd->query($sql);
+
+                $row = $result -> fetch();
+                ?>
+                <div>
+                    <span id="Total_produto">Produtos: R$<?=$row["valor"]; ?></span>
+                    <span id="Total_produto">Frete: R$<?=$row["valor"]*0.14; ?></span>
+                    <div class="line"></div>
+                    <span id="Total_produto">Total: R$<?=$row["valor"]*0.14+$row["valor"]; ?></span>
+                </div>
             </div>
         </main>
     </body>
