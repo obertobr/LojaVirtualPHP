@@ -288,7 +288,7 @@ a {
 }
 
 #comprar {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 900;
     font-family: 'Cascadia Code';
     background-color: white;
@@ -297,6 +297,11 @@ a {
     padding: 5px;
     cursor: pointer;
     width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #Total_produto {

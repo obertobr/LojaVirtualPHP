@@ -53,7 +53,7 @@
             ?>
             <div class="line"></div>
             <div>
-                <input type="button" value="COMPRAR" id="comprar">
+                <a href="functions/buy.php" id="comprar">COMPRAR</a>
                 <?php
                 $bd = connection();
                 $sql = "SELECT SUM(p.valor_unitario * c.quantidade) valor FROM carrinho c INNER JOIN produto p ON c.codigo_prod = p.codigo_prod WHERE cpf_cnpj_cli = ".$_SESSION['cpf-cnpj'];
