@@ -1,17 +1,107 @@
+:root {
+    font-size: 20px;
+    --text_color: black;
+}
+
 body {
     background-color: rgb(229, 255, 247);
-    font-family: 'Berlin Sans FB';
+    font-family: 'Inter';
     margin: 0;
+    box-sizing: border-box;
 }
 
 #navBar {
     background-color: rgb(110,122,118);
     color: white;
-    height: 50px;
-    font-weight: 800;
-    font-size: 40px;
+    height: 7%;
+    font-size: 1rem;
     padding: 0px 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#produtos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#produtos a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+
+#item_produto {
+    background-color: white;
+    width: 256px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+    margin: 20px;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#img_produto {
+    width: 100%;
+    margin: 1em;
+}
+
+#nome_produto {
+    font-size: 0.8rem;
+}
+
+#valor_produto {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+#cadastro form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    gap: 10px;
+    height: 100vh;
+    width: 100vw;
+}
+
+#form_label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+
+}
+
+#form_label label {
+    margin-bottom: 22px;
+
+}
+
+#form_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#form_input input {
+    margin: 5px;
+}
+
+#cadastro input {
+    width: 282px;
+    height: 32px;
 }
