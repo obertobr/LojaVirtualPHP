@@ -18,6 +18,14 @@ echo $sql;
 $bd->beginTransaction();
 $linhas = $bd->exec($sql);
 if ($linhas == 1){
+    $last_id = $bd->lastInsertId();
+    echo "New record created successfully. Last inserted ID is: " . $last_id;
+
+    $pasta_dir = "../imgs/products/";
+    $arquivo_nome = $pasta_dir . $last_id;
+    
+    move_uploaded_file($_FILES["imagem"]['tmp_name'], $arquivo_nome);
+
     $bd->commit();
 } else {
     $bd->rollBack();

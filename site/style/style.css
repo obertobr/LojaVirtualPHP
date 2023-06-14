@@ -304,3 +304,11 @@ a {
     font-weight: 900;
     white-space: nowrap;
 }
+
+#plus {
+    font-size: 10rem;
+}
+
+#importImg {
+    cursor: pointer;
+}
