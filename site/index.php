@@ -4,9 +4,11 @@
     </head>
     <body>
         <header id="navBar">
-            <span id="titulo">ZACARIASTORE.com</span>
+            <a href="./" id="titulo">ZACARIASTORE.com</a>
             <div id="usuario">
                 <?php
+                    session_start();
+                    
                     if (!isset($_SESSION['cpf-cnpj'])) {
                     ?>
                     <span><a href="#">Entrar</a> / <a href="cadastro.html">Cadastrar</a></span>
@@ -28,7 +30,7 @@
 
                 while ($products = $result->fetch(PDO::FETCH_ASSOC)){
                 ?>
-                <a href="#">
+                <a href="produto.php?id=<?=$products["codigo_prod"]; ?>">
                     <div id="item_produto">
                         <img src="imgs/products/<?=$products["codigo_prod"]; ?>" id="img_produto" alt="Imagem do produto">
                         <span id="nome_produto"><?=$products["nome_pro"]; ?></span>
