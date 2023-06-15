@@ -47,3 +47,5 @@ if ($linhas == 1){
     $bd->rollBack();
 };
 
+header('Location: ../finalizaCompra.php?id='.$last_id);
+

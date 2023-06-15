@@ -317,3 +317,27 @@ a {
 #importImg {
     cursor: pointer;
 }
+
+#danfe {
+    width: 98%;
+    margin: 1%;
+}
+
+#danfe, #danfe tr, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#danfe th {
+    text-align: left;
+}
+
+#danfe div {
+    width: 100%;
+    text-align: center;
+}
+
+#danfe th > span:first-child {
+    font-size: 0.8rem;
+}
