@@ -323,7 +323,7 @@ a {
     margin: 1%;
 }
 
-#danfe, #danfe tr, th{
+#danfe, #danfe tr,#danfe th{
     border: 1px solid black;
     border-collapse: collapse;
     background-color: white;

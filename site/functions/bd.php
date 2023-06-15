@@ -13,7 +13,7 @@ function connection(){
 
 function verify() {
     if (!isset($_SESSION['cpf-cnpj'])) {
-        header('Location: ../login.php');
+        header('Location: ../login.html');
         exit;
     }
 }
