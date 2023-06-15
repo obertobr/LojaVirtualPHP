@@ -42,7 +42,7 @@
                 <?php
                     }
             ?>
-            <a href="AdcionarProduto.php">
+            <a href="AdicionarProduto.php">
                 <div id="item_produto">
                     <span id="plus">+</span>
                     <span>Adicionar produto</span>
