@@ -5,7 +5,7 @@
     </head>
     <body>
         <header id="navBar">
-            <a href="./" id="titulo">ZACARIASTORE.com</a>
+            <a href="./ARProdutos.php" id="titulo">ZACARIASTORE.com</a>
             <div id="usuario">
                 <?php
                     session_start();

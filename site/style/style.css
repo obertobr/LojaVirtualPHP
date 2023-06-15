@@ -341,3 +341,14 @@ a {
 #danfe th > span:first-child {
     font-size: 0.8rem;
 }
+
+#deletarProd {
+    width: 98%;
+    margin: 0px 2px 1% 1%;
+    font-size: 3rem;
+    background-color: red;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
