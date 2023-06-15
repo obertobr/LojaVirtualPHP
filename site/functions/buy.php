@@ -13,7 +13,7 @@ $result = $bd->query($sql);
 $row = $result -> fetch();
 $valor = $row["valor"];
 
-$sql = "INSERT INTO `compra` (`numero_compra`, `data`, `valor_comissao`, `valor_transporte`, `cpf_cnpj_vend`, `cpf_cnpj_transp`, `cpf_cnpj_cli`) VALUES ('', '".date("Y-m-d")."', '".($valor*0.1)."', '".($valor*0.15)."', '21312341232', '2983012341', '".$_SESSION['cpf-cnpj']."')";
+$sql = "INSERT INTO `compra` (`numero_compra`, `data`, `valor_comissao`, `valor_transporte`, `cpf_cnpj_vend`, `cpf_cnpj_transp`, `cpf_cnpj_cli`) VALUES ('', '".date("Y-m-d")."', '".($valor*0.1)."', '".($valor*0.15)."', '31550892000128', '97151662000102', '".$_SESSION['cpf-cnpj']."')";
 
 echo $sql;
 
