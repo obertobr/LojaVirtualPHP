@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="style/style.css">
         <script src="script/script.js"></script>
+        <title>Produto</title>
     </head>
     <body>
         <header id="navBar">

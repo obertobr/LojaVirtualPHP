@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style/style.css">
+        <title>Ediar e remover produtos</title>
     </head>
     <body>
         <header id="navBar">

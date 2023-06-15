@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style/style.css">
+        <title>ZACARIASTORE.com</title>
     </head>
     <body>
         <header id="navBar">

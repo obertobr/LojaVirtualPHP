@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style/style.css">
+        <title>Carrinho</title>
     </head>
     <body>
         <header id="navBar">

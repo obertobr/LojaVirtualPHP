@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="style/style.css">
         <script src="script/script.js"></script>
+        <title>Editar produto</title>
     </head>
     <body>
         <header id="navBar">
