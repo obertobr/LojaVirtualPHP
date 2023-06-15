@@ -26,7 +26,7 @@
             <?php
                 include_once './functions/bd.php';
                 $bd = connection();
-                $sql = "select * from produto";
+                $sql = "select * from produto where quantidade > 0";
                 $result = $bd->query($sql);
 
                 while ($products = $result->fetch(PDO::FETCH_ASSOC)){

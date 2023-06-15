@@ -32,7 +32,7 @@ $result = $bd->query($sql);
 $sql = "";
 while($products = $result->fetch(PDO::FETCH_ASSOC)){
     $sql = $sql . "INSERT INTO `possui` (`numero_compra`, `codigo_prod`, `valor`, `quantidade`) VALUES ($last_id, '".$products["codigo_prod"]."', '".$products["valor_unitario"]."', '".$products["qtd"]."');";
-    $sql = $sql . "UPDATE produto SET quantidade=quantidade-".$products["qtd"]." WHERE codigo_prod =".$products["codigo_prod"];
+    $sql = $sql . "UPDATE produto SET quantidade=quantidade-".$products["qtd"]." WHERE codigo_prod =".$products["codigo_prod"].";";
 }
 
 echo $sql;

@@ -30,3 +30,5 @@ if ($linhas == 1){
 } else {
     $bd->rollBack();
 };
+
+header('Location: ' . $_SERVER['HTTP_REFERER']);
