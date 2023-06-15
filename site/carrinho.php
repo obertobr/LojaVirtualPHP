@@ -53,14 +53,14 @@
             ?>
             <div class="line"></div>
             <div>
-                <a href="functions/buy.php" id="comprar">COMPRAR</a>
                 <?php
-                $bd = connection();
-                $sql = "SELECT SUM(p.valor_unitario * c.quantidade) valor FROM carrinho c INNER JOIN produto p ON c.codigo_prod = p.codigo_prod WHERE cpf_cnpj_cli = ".$_SESSION['cpf-cnpj'];
-                $result = $bd->query($sql);
+                    $bd = connection();
+                    $sql = "SELECT SUM(p.valor_unitario * c.quantidade) valor, COUNT(c.codigo_prod) itens FROM carrinho c INNER JOIN produto p ON c.codigo_prod = p.codigo_prod WHERE cpf_cnpj_cli = ".$_SESSION['cpf-cnpj'];
+                    $result = $bd->query($sql);
 
-                $row = $result -> fetch();
+                    $row = $result -> fetch();
                 ?>
+                <a id="comprar" <?php if($row["itens"] == 0){echo 'style="filter: opacity(0.5)"';}else{echo "href='functions/buy.php'";} ?>>COMPRAR</a>
                 <div>
                     <span id="Total_produto">Produtos: R$<?=$row["valor"]; ?></span>
                     <span id="Total_produto">Frete: R$<?=$row["valor"]*0.14; ?></span>
